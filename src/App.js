@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import SearchBar from "./components/SearchBar";
+import ImageGrid from "./components/ImageGrid";
+import { fetchImages } from "./api/fetchImages";
+import "./App.css";
 
 function App() {
+  const [images, setImages] = useState([]);
+
+  const searchImages = async (query) => {
+    const data = await fetchImages(query);
+    setImages(data.hits);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1>Pixabay Image Search</h1>
+      <SearchBar onSearch={searchImages} />
+      <ImageGrid images={images} />
     </div>
   );
 }
