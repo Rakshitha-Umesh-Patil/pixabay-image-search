@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+Pixabay Image Search Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple, elegant web application that allows users to search for images using text input and displays the results in a responsive grid using the Pixabay API.
 
-## Available Scripts
+This project was built as part of an internship assignment and follows clean folder structure, modular JavaScript, and industry coding practices.
 
-In the project directory, you can run:
+🚀 Features
+Search images by keyword
+Responsive image grid layout
+Uses Pixabay public API
+Environment variable for API key security
+Clean, modular project structure
+Vanilla JavaScript (no frameworks, no Vite)
+Error handling and loading state
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🛠️ Tech Stack
+HTML5
+CSS3 (Grid/Flexbox)
+JavaScript (ES6)
+Pixabay REST API
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+📁 Project Structure
+pixabay-image-search/
+│
+├── node_modules/
+├── public/
+│
+├── src/
+│   ├── api/
+│   │   └── pixabay.js
+│   ├── components/
+│   │   ├── SearchBar.js
+│   │   ├── ImageGrid.js
+│   │   └── ImageCard.js
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+│
+├── .env          
+├── package.json
+├── .gitignore
+└── README.md
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🧠 How It Works
+User enters a search term
+app.js captures input and calls fetchImages.js
+Images are fetched from Pixabay API
+Results are dynamically rendered into a grid
 
-### `npm run build`
+📸 Sample Output
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Images are displayed in a responsive grid with proper spacing and scaling.
